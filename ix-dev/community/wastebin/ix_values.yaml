@@ -1,0 +1,12 @@
+images:
+  image:
+    repository: quxfoo/wastebin
+    tag: "3.9.0@sha256:d441b009827b896b67d7df5d7bf849cc5cff970c505cb50d72c946c3d3fd0a5e"
+  container_utils_image:
+    repository: ixsystems/container-utils
+    tag: "1.0.2@sha256:46eba20714c1cc6784f60e245c32c33a2d9f616e47d804694a9854248c89a992"
+
+consts:
+  wastebin_container_name: wastebin
+  perms_container_name: permissions
+  data_path: /data
