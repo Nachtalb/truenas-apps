@@ -1,0 +1,9 @@
+categories:
+- monitoring
+icon_url: https://media.sys.truenas.net/apps/bugsink/icons/icon.svg
+screenshots: []
+tags:
+- error tracking
+- monitoring
+- sentry
+- debugging

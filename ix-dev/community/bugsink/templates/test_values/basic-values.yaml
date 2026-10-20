@@ -1,0 +1,35 @@
+resources:
+  limits:
+    cpus: 2.0
+    memory: 4096
+
+TZ: Europe/Zurich
+
+bugsink:
+  postgres_image_selector: postgres_18_image
+  db_password: "s3cr&t/p@ss+w%rd"
+  secret_key: 9Jq2vX7mR4tLwP8zK1nB6cY3hF5dG0sAeUiOoTx4Wq7Zp2Lm9Rk3Vn6Bh8Cj1Df
+  base_url: http://localhost:8080/
+  admin_email: admin@example.com
+  admin_password: a-test-admin-password
+  additional_envs: []
+
+run_as:
+  user: 568
+  group: 568
+
+network:
+  web_port:
+    bind_mode: published
+    port_number: 8080
+
+ix_volumes:
+  postgres_data: /opt/tests/mnt/bugsink/postgres_data
+
+storage:
+  postgres_data:
+    type: ix_volume
+    ix_volume_config:
+      dataset_name: postgres_data
+      create_host_path: true
+  additional_storage: []
